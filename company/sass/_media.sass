@@ -1,0 +1,109 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+
+//Extra small: >0
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
+
+@media (max-width: 1053px)
+    .Companyname
+        padding-left: 50px
+@media (max-width: 760px)
+    .Top-menu
+        margin-top: 30px
+        li
+            margin-left: 40px
+@media (max-width: 510px)
+    .Top-menu
+        display: none
+@media (max-width:1199px)
+    .ClientMain
+        margin-left: 80px
+@media (max-width:1032px)
+    .Exp-Button
+        margin-bottom: 0px
+    .Skills
+        margin-bottom: 150px
+        margin-left: 40px
+    .Exp
+        margin-right: 40px
+    .Ready-Button
+        a
+            padding: 1px
+@media (max-width: 992px)
+    .ReadyRow
+        height: 240px
+    .second-block-2-main
+        margin-bottom: 50px
+    .ClientMain
+        width: auto
+        margin-right: 85px
+    .block__hint::after
+        right: 82px
+@media (max-width: 767px)
+    .MainBlog
+        margin-bottom: 15px
+@media (max-width: 625px)
+    .ClientPerson
+        width: 68%
+@media (max-width: 557px)
+    .third-block-bigtext
+        width: auto
+    .third-block-text
+        width: auto
+    .Exp-Text
+        width: auto
+@media (max-width: 571px)
+    .Progress
+        width: 350px
+@media (max-width: 760px)
+    .FooterInfo
+        margin-bottom: 20px
+        margin-top: 20px
+    .Exp
+        justify-content: flex-end
+@media (max-width: 457px)
+    .Skills
+        margin-left: 100px
+    .SkillsMain
+        margin-left: 1px
+@media (max-width: 420px)
+    .Progress
+        width: 200px
+    .ClientPerson
+        width: 44%
+@media (max-width: 350px)
+    .ReadyRow
+        height: 280px 

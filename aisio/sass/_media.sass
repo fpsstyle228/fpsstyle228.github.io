@@ -1,0 +1,195 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
+
+@media (max-width: 730px)
+	.Header-list
+		ul
+			padding: 0
+@media (max-width: 974px)
+	.Bitcoin-input-cont
+		input
+			width: 70px
+@media (max-width: 1181px)
+	.Partners:nth-child(4)
+		margin-left: 0
+	.Partners:nth-child(3)
+		margin-right: 20px
+@media (max-width: 1169px)
+	.Partners:nth-child(3)
+		margin-right: 0
+@media (max-width: 880px)
+	.Partners:nth-child(3)
+		margin-right: 40px
+		margin-left: 0
+@media (max-width: 570px)
+	.Partners:nth-child(2)
+		margin-left: 0
+	.Partners:nth-child(4)
+		margin-left: 0
+	.Partners:nth-child(3)
+		margin-right: 0	
+@media (max-width: 570px)
+	.Trans-upper-cont
+		display: flex
+		justify-content: center
+@media (max-width: 579px)
+	.Footer-list
+		ul
+			float: left
+			li
+				margin-top: 0
+@media (max-width: 750px)
+	.Bitcoin-input-cont
+		input
+			width: 140px
+	.Bitcoin-input-button
+		margin-top: 0
+		width: 581px
+	.Bitcoin-input div:last-child
+		margin-top: 0
+@media (max-width: 625px)
+	.Bitcoin-input-cont
+		 input
+			 width: 100px
+	.Bitcoin-input-button
+		width: 511px
+@media (max-width: 545px)
+	.Bitcoin-input-button
+		width: 450px
+	.Bitcoin-input-cont
+		input
+			width: 288px
+	.Bitcoin-input
+		div:nth-child(2)
+			margin-top: 0
+	.Bitcoin-fix
+		margin-left: 13px
+@media (max-width: 490px)
+	.Bitcoin-input-button
+		width: 410px
+	.Bitcoin-input-cont
+		input
+			width: 260px
+@media (max-width: 455px)
+	.Bitcoin-input-button
+		width: 370px
+	.Bitcoin-input-cont
+		input
+			width: 226px
+@media (max-width: 412px)
+	.Bitcoin-input-button
+		width: 340px
+	.Bitcoin-input-cont
+		input
+			width: 195px
+@media (max-width: 382px)
+	.Bitcoin-input-button
+		width: 280px
+	.Bitcoin-input-cont
+		input
+			width: 135px
+@media (max-width: 996px)
+	.Banner-main
+		background-image: none
+@media (max-width: 360px)
+	.Trans-header
+		font-size: 37px
+@media (max-width: 989px)
+	.Banner-main
+		padding-left: 0
+@media (max-width: 1200px)
+	.Header-logo-main
+		padding-left: 0
+
+@media (min-width: 1600px)
+	.Header-logo-main
+		padding-left: 9%
+	.Header-list
+		ul
+			padding-left: 10%
+@media (min-width: 1800px)
+	.Header-list
+		ul
+			padding-left: 17%
+@media (min-width: 1970px)
+	.Header-list
+		ul
+			padding-left: 22%
+@media (min-width: 576px)
+	.modal-dialog
+		max-width: 850px!important
+@media (max-width: 576px)
+	.modal-dialog
+		max-width: 395px!important
+@media (max-width: 994px)
+	.bg1
+		background-image: none
+@media (max-width: 500px)
+	.modal-content
+		background-image: none
+	.modal-body
+		padding: 0 !important
+	.modal_bdc_list
+		border-radius: 0
+		ul
+			margin-right: 10px
+			margin-left: 10px
+			padding: 0
+	.modal_main_custom
+		flex-wrap: wrap
+	.Bitcoin-input-cont-media
+		width: 190px !important
+	.modal_content_inp div:first-child
+		margin-right: 2px 
+@media (max-width: 360px)
+	.modal-dialog
+		max-width: 340px!important
+@media (max-width: 320px)
+	.modal-dialog
+		max-width: 300px!important
+	.Bitcoin-input-cont-media
+		width: 150px !important
+	.modal_content_inp div:first-child
+		margin-right: 2px
+	.modal_bdc_list
+		ul
+			padding: 0 !important
+			margin-right: 5px
+			margin-left: 5px
+@media (max-width: 1024px)
+		.modal_bonus_text
+			padding: 10px
+@media (max-width: 800px)
+	.License
+		background-image: none
+	.About
+		background-image: none
+

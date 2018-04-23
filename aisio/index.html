@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>AISIO</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+	<meta name="theme-color" content="#000">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+	  crossorigin="anonymous"></script>
+</head>
+	  <!-- Modal -->
+	  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal_dialog_main modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-body">
+				<!-- content modal -->
+				<!-- второй блок -->
+				<div id="modal_content" class="modal_main_custom hidden class2">
+						<p>Enter PayPal Email</p>
+					<div class=" Bitcoin-input-cont input_modal-cont">
+						<input class="Bitcoin-input-cont-spec input_modal" type="text" placeholder="example@example.com">
+					</div>
+				</div>
+				<!-- третий блок -->
+				<div id="modal_content" class="modal_main_custom show class3">
+					<p><span>TransactionID:</span><span>232146</span></p>
+					<p>SEND 1 BTC to the adress bellow</p>
+					<p><span>To:</span><ins>1231123b12h3g1yf3y1y3gv1y23tc</ins></p>
+					<p><img src="./img/qr.png" alt="qr"></p>	
+				</div>
+				<!-- первый блок -->
+				<div class="modal_content_inp modal_main_custom hidden class1">
+				<div>
+						<p>You send:</p>
+						<div class=" Bitcoin-input-cont">
+							<input class="Bitcoin-input-cont-spec Bitcoin-input-cont-media" type="text">
+							<img src="./img/-----14.png" alt="bitcoin">
+							<span>
+								<i class="fas fa-caret-down"></i>
+							</span>
+						</div>
+					</div>
+					<div>
+						<p>You get:</p>
+							<div class="Bitcoin-input-cont">
+								<span>$</span>
+								<input class="Bitcoin-input-cont-media" type="text">
+								<img class="Bitcoin-fix" src="./img/-----15.png" alt="PAYPAL">
+								<span>
+									<i class="fas fa-caret-down"></i>
+								</span>
+							</div>
+					</div>
+				</div>
+				<div class="modal_bonus_text_cont hidden">
+					<p class="modal_bonus_text">+ Bonus $20</p>
+				</div>
+				<div class="modal_bdc_list hidden">
+					<ul>
+						<li><span>1 BTC -</span><span> 5%</span></li>
+						<li><span>2 BTC -</span><span> 10%</span></li>
+						<li><span>2 BTC -</span><span> 20%</span></li>
+					</ul>
+					<ul>
+						<li><span>1 BTC -</span><span> 5%</span></li>
+						<li><span>2 BTC -</span><span> 10%</span></li>
+						<li><span>2 BTC -</span><span> 20%</span></li>
+					</ul>
+					<ul>
+						<li><span>1 BTC -</span><span> 5%</span></li>
+						<li><span>2 BTC -</span><span> 10%</span></li>
+						<li><span>2 BTC -</span><span> 20%</span></li>
+					</ul>
+				</div>
+				<div class="btn_bitoc_button"><button id="myButton" onclick="handleIt()" class="Bitcoin-input-button-modal">Next stage</button></div>
+				<div class="line_hov_model" id="boxes">
+					<p class="active"></p>
+					<p></p>
+					<p></p>
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+<body>
+	<div class="container-fluid">
+		<div class="row align-items-end justify-content-center Header-main">
+			<div class="col-xl-3 col-lg-3 col-md-4">
+				<div class="Header-logo-main">
+					<img src="./img/logo.png" alt="logo">
+					<p>
+						<span>BTC</span>
+						<span>obmen</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-xl-8 col-lg-10">
+				<div class="Header-list">
+					<ul>
+						<li>
+							<span>MARKET AVERAGE:</span>
+							<span>7972.7</span>
+							<span>USD/BTC</span>
+						</li>
+						<li>
+							<span>OUR RATE IS:</span>
+							<span class="green">9168.61</span>
+							<span>USD/BTC</span>
+						</li>
+						<li>
+							<span>Bitfinex:</span>
+							<span>7949.9</span>
+							<span>USD/BTC</span>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="col-lg-11 col-md-12 col-sm-11 ">
+				<div class="Banner-main">
+					<p>Exchange BTC to Paypal,
+						<br> secure and fast!
+					</p>
+					<p>GET PAYPAL AND SPEND IT IN MILLION STORES!</p>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-12">
+				<div class="Bitcoin-main">
+					<div class="Bitcoin">
+						<div class="Bitcoin-input">
+							<div>
+								<p>You send:</p>
+								<div class="Bitcoin-input-cont">
+									<input class="Bitcoin-input-cont-spec" type="text">
+									<img src="./img/-----14.png" alt="bitcoin">
+									<span>
+										<i class="fas fa-caret-down"></i>
+									</span>
+								</div>
+							</div>
+							<div>
+								<p>You get:</p>
+								<div class="Bitcoin-input-cont">
+									<span>$</span>
+									<input type="text">
+									<img class="Bitcoin-fix" src="./img/-----15.png" alt="PAYPAL">
+									<span>
+										<i class="fas fa-caret-down"></i>
+									</span>
+								</div>
+							</div>
+							<div>
+								<button type="button" data-toggle="modal" data-target="#exampleModal" class="Bitcoin-input-button">Exhange now</button>
+							</div>
+						</div>
+						<div class="Bitcoin-text">
+							<p class="Bitcoin-text-paragraph">
+								<span>
+									<i class="far fa-clock"></i>
+								</span>
+								<span>5min 36sec</span>
+								<span>time last transaction</span>
+							</p>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row bg1 justify-content-center">
+			<div class="col-12">
+				<p class="Skills-uppertext">
+					<span>WHY</span>
+					<span>WE</span>
+				</p>
+
+
+			</div>
+			<div class="col-lg-3 col-md-7 col-sm-9 col-10">
+				<div class="Items-main">
+					<div class="Items">
+						<span class="Items-img-span">
+							<img class="Items-img" src="./img/-----28.png" alt="">
+						</span>
+						<p class="Items-header">Just BTC and PayPal</p>
+						<p class="Items-text">We are providing safe and secure online BTC converter to most popular direction - PayPal </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-7 col-sm-9 col-10">
+				<div class="Items-main-bgc">
+					<div class="Items">
+						<span class="Items-img-span">
+							<img class="Items-img" src="./img/-----29.png" alt="">
+						</span>
+						<p class="Items-header">Safe & Secure & Trusted
+						</p>
+						<p class="Items-text">Anybody can be sure that they have place where they can exchange BTC to PyaPal absolutely riskfree.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-7 col-sm-9 col-10">
+				<div class="Items-main">
+					<div class="Items">
+						<span class="Items-img-span">
+							<img class="Items-img" src="./img/-----30.png" alt="">
+						</span>
+						<p class="Items-header">Feel it like in 5 star hotel
+						</p>
+						<p class="Items-text">Feel it like in president apartments. It's comfortable to use our service, we have fast support and everything is smooth.</p>
+					</div>
+				</div>
+			</div>
+			<div class="w-100"></div>
+
+		
+			<div class="col-lg-3 col-md-7 col-sm-9 col-10">
+				<div class="Items-main">
+					<div class="Items">
+						<span class="Items-img-span">
+							<img class="Items-img" src="./img/-----28.png" alt="">
+						</span>
+						<p class="Items-header">Just BTC and PayPal</p>
+						<p class="Items-text">We are providing safe and secure online BTC converter to most popular direction - PayPal </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-7 col-sm-9 col-10">
+				<div class="Items-main">
+					<div class="Items">
+						<span class="Items-img-span">
+							<img class="Items-img" src="./img/-----28.png" alt="">
+						</span>
+						<p class="Items-header">Just BTC and PayPal</p>
+						<p class="Items-text">We are providing safe and secure online BTC converter to most popular direction - PayPal </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-7 col-sm-9 col-10">
+				<div class="Items-main">
+					<div class="Items">
+						<span class="Items-img-span">
+							<img class="Items-img" src="./img/-----28.png" alt="">
+						</span>
+						<p class="Items-header">Just BTC and PayPal</p>
+						<p class="Items-text">We are providing safe and secure online BTC converter to most popular direction - PayPal </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row Partners-row">
+			<div class="col-12">
+				<p class="Partners-header">
+					<span>OUR</span>
+					<span>PARTNERS</span>
+				</p>
+			</div>
+			<div class="col-12">
+				<div class="Partners-main">
+					<div class="Partners">
+						<div>
+							<img src="./img/-----17.png" alt="">
+						</div>
+					</div>
+					<div class="Partners">
+						<div>
+							<img src="./img/ICO-ALERT.png" alt="">
+						</div>
+					</div>
+
+					<div class="Partners">
+						<div>
+							<img src="./img/Track.png" alt="">
+						</div>
+					</div>
+
+					<div class="Partners">
+						<div>
+							<img src="./img/Ico-buffer.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="row License justify-content-center">
+			<div class="col-12">
+				<p class="License-header">
+					<span>license</span>
+					<span>certificates</span>
+				</p>
+			</div>
+			<div class="col-xl-3 col-lg-4">
+				<div class="License-photo-main">
+					<div class="License-photo">
+						<img src="./img/-----32.png" alt="license">
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-4">
+				<div class="License-photo-main">
+					<div class="License-photo">
+						<img src="./img/-----33.png" alt="license">
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-4">
+				<div class="License-photo-main">
+					<div class="License-photo">
+						<img src="./img/-----34.png" alt="license">
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="License-button-main">
+					<button class="License-button">
+						Exchange now
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center Trans">
+			<div class="col-12">
+				<p class="Trans-header">
+					<span>RECENT</span>
+					<span>TRANSACTIONS</span>
+				</p>
+			</div>
+			<div class="col-xl-3 col-lg-4 col-md-7">
+				<div class="Trans-main">
+					<div class="Trans-upper">
+						<p>01</p>
+						<img src="./img/-----36.png" alt="bitc-molotoc">
+					</div>
+					<p class="Trans-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+						occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+					</p>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-4 col-md-7">
+					<div class="Trans-main">
+						<div class="Trans-upper">
+							<p>02</p>
+							<img src="./img/-----36.png" alt="bitc-molotoc">
+						</div>
+						<p class="Trans-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+							occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+						</p>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-7">
+						<div class="Trans-main">
+							<div class="Trans-upper">
+								<p>03</p>
+								<img src="./img/-----36.png" alt="bitc-molotoc">
+							</div>
+							<p class="Trans-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+								occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+							</p>
+						</div>
+					</div>
+		</div>
+		<div class="row About justify-content-center About">
+			<div class="col-12">
+				<p class="About-header"><span>ABOUT</span><span>US</span></p>
+			</div>
+			<div class="col-9">
+				<p class="About-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+			</div>
+		</div>
+		<div class="row justify-content-around align-items-center Footer">
+			<div class="col-xl-4 col-lg-5 col-sm-4">
+				<p class="Footer-text">
+						Copyright ©  2018 |  shiftex.io All rights reserved.
+				</p>
+			</div>
+			<div class="col-xl-5 col-lg-4 col-sm-4">
+				<div class="Footer-list">
+					<ul>
+						<li><a href="#">About API</a></li>
+						<li><a href="#">Tools</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#">Support</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+
+</html>

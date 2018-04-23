@@ -1,0 +1,364 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+ul
+    list-style: none
+
+.Companyname
+    font-family: $PoiretOne
+    color: $white
+    font-size: 30px
+    margin-top: 74px
+    padding-left: 174px
+    margin-bottom: 0px
+    span:last-child
+        color: #C9C9C6
+        font-size: 28px 
+
+.first-block
+    background-color: $bg-gray
+.Top-menu
+    display: flex
+    margin-top: 75px
+    margin-bottom: 0px
+    li
+        margin-left: 15px
+        a
+            color: $white
+            font-size: 13px
+            font-family: $MontserratRegular
+            text-decoration: none
+            text-transform: uppercase
+            &::after
+                content: ''
+                width: 100%
+                height: 2px
+                display: block
+                background-color: $white
+                transform: scale(0)
+                transition: all 0.2s 
+            &:hover
+                    &::after
+                        transform: scale(1)
+.BigGrayText
+    color: $white
+    font-size: 50px
+    margin-top: 196px
+    font-family: $CabinRegular
+.first-block-2
+    background-color: $bg-gray
+    button
+        background-color: $green
+        padding-left: 15px
+        padding-right: 15px
+        height: 56px
+        outline: none
+        border: none
+        color: $white
+        text-transform: uppercase
+        font-family: $LatoBold
+        font-size: 13px
+        border-radius: 5px 
+        margin-top: 60px
+.SmallGrayText
+    font-size: 15px
+    font-family: $LatoLight 
+    color: $white
+    line-height: 32px
+    margin-bottom: 272px
+.second-block
+    background-color: $white
+    margin-bottom: 100px
+    &-bigtext
+        font-family: $CabinRegular
+        font-size: 48px
+        width: 100%
+        color: $very-dark
+        text-align: center
+        margin-top: 128px
+.second-block-2
+    margin-bottom: 150px
+    &-icon
+        font-size: 30px
+        color: $white
+        width: 65px
+        height: 65px
+        text-align: center
+        background-color: $green
+        border-radius: 50%
+        line-height: 62px
+        transform: translateY(-30px)
+    &-iconcontainer
+        display: flex
+        justify-content: center
+        width: 100%
+    &-main
+        display: flex
+        justify-content: center
+        flex-direction: column
+        flex-wrap: wrap
+        border: 1px solid #f2f2f2
+    &-bigtext
+        font-family: $LatoBold
+        font-size: 18px
+        color: $very-dark
+        text-align: center
+        text-transform: uppercase
+    &-smalltext
+        font-family: $LatoRegular
+        font-size: 16px
+        text-align: center
+.third-block
+    background-color: $gray
+    &-bigtext
+        font-family: $CabinRegular
+        color: $very-dark
+        font-size: 48px
+        margin-bottom: 40px
+        width: 510px
+        margin-top: 128px
+    &-text
+        font-family: $LatoRegular
+        color: $text-gray
+        font-size: 16px
+        margin-bottom: 20px
+        width: 510px
+    &-button
+        font-family: $LatoBold
+        font-size: 15px
+        text-transform: uppercase
+        color: $very-dark
+        border: 1px solid $very-dark
+        border-radius: 5px
+        padding: 15px
+        width: 232px
+        text-align: center
+        margin-bottom: 130px
+        &:hover
+            color: $green
+            border: 1px solid $green
+            transition: all 0.2s
+.ClientsBigText
+    font-family: $CabinRegular
+    font-size: 48px
+    color: $very-dark
+    text-align: center
+    width: 100%
+    margin-top: 128px
+.ClientMain
+    width: 437px
+.ClientText
+    font-family: $LatoRegular
+    font-size: 16px
+    color: $text-gray
+    border: 2px solid #f2f2f2
+    padding: 15px
+.block__hint
+    position: relative
+    border: 2px solid #f2f2f2
+    background: $white
+.block__hint::after
+    display: block
+    content: ""
+    position: absolute
+    height: 15px
+    width: 15px
+    background: $white
+    border-left: 2px solid #f2f2f2
+    border-top: 2px solid #f2f2f2
+    bottom: 28px
+    right: 20px
+    transform: rotate(-135deg)
+.ClientPerson
+    text-align: right
+    float: left
+    width: 83%
+    span:first-child
+        font-family: $LatoBold
+        font-size: 15px
+        color: $very-dark
+    span:last-child
+        font-family: $LatoRegular
+        font-size: 13px
+        color: #666666
+.ClientImage
+    border-radius: 50%
+    margin-left: 15px
+    width: 58px
+    height: 58px
+.fourth-bloc
+     background-color: #353535
+.ExpMain
+    display: flex
+    justify-content: flex-end
+.Exp
+    display: flex
+    flex-direction: column
+    &-BigText
+        font-family: $CabinRegular
+        font-size: 48px
+        color: $white
+        margin-top: 130px
+    &-Text
+        font-family: $LatoRegular
+        font-size: 15px
+        color: $white
+        width: 465px
+    &-Button
+        font-family: $LatoBold
+        font-size: 15px
+        border: 2px solid $white
+        border-radius: 5px
+        padding: 18px
+        width: 234px
+        margin-top: 35px
+        margin-bottom: 150px
+        &:hover
+            color: $green
+            transition: all 0.2s
+            border: 2px solid $green
+        span
+            padding: 20px 25px 20px 25px
+            a
+                color: $white
+                text-transform: uppercase
+                text-decoration: none
+.SkillsMain
+    margin-left: 20px
+.Skills
+    &-text
+        font-family: $LatoRegular
+        font-size: 15px
+        color: $white
+.Progress
+    position: relative
+    width: 490px
+    height: 20px
+    background-color: $white
+.bar
+    position: absolute
+    width: 1%
+    height: 100%
+    background-color: $green
+    &::after
+        display: block
+        content: ""
+        position: absolute
+        height: 10px
+        width: 10px
+        background: #353535
+        border-left: 2px solid $very-dark
+        border-top: 2px solid $very-dark
+        bottom: 25px
+        right: 0px
+        transform: rotate(-135deg)
+.BlogBigText
+    font-family: $CabinRegular
+    font-size: 48px
+    color: $very-dark
+    width: 100%
+    text-align: center
+    margin-top: 120px
+    margin-bottom: 60px
+.MainBlog
+    display: flex
+    justify-content: center
+    margin-bottom: 114px
+.Blog
+    display: flex
+    flex-direction: column
+    justify-content: center
+    img
+        width: 100%
+
+        margin-bottom: 15px
+    &-bigtext
+        font-family: $LatoBold
+        font-size: 18px
+        color: $very-dark
+        margin-left: 15px
+    &-graytext
+        font-family: $LatoRegular
+        font-size: 14px
+        color: #999999
+        margin-left: 15px
+        span
+            span
+                padding-left: 5px
+                padding-right: 5px
+        span:last-child
+            padding-left: 10px
+    &-text
+        font-family: $LatoRegular
+        font-size: 16px
+        color: $text-gray
+        margin-left: 15px
+.ReadyRow
+    background-color: $green
+    height: 175px
+.ReadyMain
+    margin-top: 30px
+    display: flex
+    flex-direction: column
+    p:first-child
+        font-family: $LatoBold
+        font-size: 24px
+        color: $white
+        padding-left: 15px
+    p:last-child
+        font-family: $LatoRegular
+        font-size: 16px
+        color: $white
+        padding-left: 15px
+.Readybtn
+    display: flex
+    justify-content: flex-start
+.Ready-Button
+    font-family: $LatoBold
+    font-size: 16px
+    color: $white
+    text-transform: uppercase
+    border: 2px solid $white
+    padding: 10px
+    border-radius: 5px
+    margin-top: 30px
+    a
+        color: $white
+        text-decoration: none
+        padding: 15px
+.FooterRow
+    background-color: #232323
+.Companynamefooter
+    font-family: $PoiretOne
+    color: $white
+    font-size: 20px
+    span:last-child
+        color: #C9C9C6
+        font-size: 20px 
+.FooterInfo
+    margin-bottom: 70px
+    margin-top: 50px
+    p:first-child
+        font-family: $LatoBold
+        font-size: 15px
+        color: $white
+        text-transform: uppercase
+    p:last-child
+        font-family: $LatoRegular
+        font-size: 14px
+        color: $white
+    &-Adress
+        font-family: $LatoRegular
+        font-size: 14px
+        color: $white
+
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
